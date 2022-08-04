@@ -9,6 +9,7 @@
 !/.github/**
 !/.config/
 !/.config/**
+/.config/fish/fish_variables
 
 !.bashrc
 
