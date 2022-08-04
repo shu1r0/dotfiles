@@ -1,0 +1,20 @@
+### all ignore ###
+/*
+/.**
+
+### not ignore ###
+!/.bin/
+!/.bin/**
+!/.bin.local
+!/.github/**
+!/.config/
+!/.config/**
+
+!.bashrc
+
+!/.gitignore_global
+!/.gitconfig_shared
+
+!/README.md
+!/LICENSE
+!.gitignore
