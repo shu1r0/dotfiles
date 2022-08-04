@@ -7,3 +7,8 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 
 # 非表示ファイルを表示
 defaults write com.apple.finder AppleShowAllFiles -bool true
+
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fisher install laughedelic/fish_logo
+
+
