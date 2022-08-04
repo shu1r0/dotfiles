@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 export PS1="\w \u \! \$ "
 
 
@@ -5,10 +7,6 @@ export PS1="\w \u \! \$ "
 # PATH
 # ==============================
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-
-export PATH="/usr/local/opt/qt/bin:$PATH"
-export PATH="/usr/local/opt/qt@5/bin:$PATH"
 
 
 # ==============================
@@ -17,7 +15,6 @@ export PATH="/usr/local/opt/qt@5/bin:$PATH"
 alias ls="/bin/ls -GF"
 alias la="/bin/ls -aGF"
 alias ll="/bin/ls -al"
-alias update="brew -v; brew update -y; brew upgrade;"
 
 
 # ==============================

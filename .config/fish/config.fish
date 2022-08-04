@@ -2,6 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set MY_OS (uname -s)
+if test "$MY_OS" = "Darwin"
+    [ -f "$HOME/.bin/mac_env/path.sh" ] && source "$HOME/.bin/mac_env/path.sh"
+end
+
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
