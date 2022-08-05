@@ -8,6 +8,7 @@
 !/.bin.local
 !/.github/**
 !/.config/
+!/.config/git/
 !/.config/git/**
 !/.config/fish/config.fish
 !/.config/fish/functions/fish_prompt.fish
