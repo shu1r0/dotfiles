@@ -12,9 +12,7 @@ export PATH="/usr/local/sbin:$PATH"
 # ==============================
 # ALIAS
 # ==============================
-alias ls="/bin/ls -GF"
-alias la="/bin/ls -aGF"
-alias ll="/bin/ls -al"
+source ~/.config/bash/alias.sh
 
 
 # ==============================

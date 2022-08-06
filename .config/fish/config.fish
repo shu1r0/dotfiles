@@ -7,6 +7,9 @@ if test "$MY_OS" = "Darwin"
     [ -f "$HOME/.bin/mac_env/path.sh" ] && source "$HOME/.bin/mac_env/path.sh"
 end
 
+# ALIAS
+source ~/.config/bash/alias.sh
+
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
