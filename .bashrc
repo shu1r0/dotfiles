@@ -2,17 +2,28 @@
 
 export PS1="\w \u \! \$ "
 
-
-# ==============================
-# PATH
-# ==============================
 export PATH="/usr/local/sbin:$PATH"
 
-
-# ==============================
-# ALIAS
-# ==============================
 source ~/.config/bash/alias.sh
+
+
+MY_OS=$(uname -s)
+case $MY_OS in
+  'Linux')
+    # WSL
+    if uname -a | grep -q '^Linux.*Microsoft'; then
+      source ~/.config/bash/wsl1/alias.sh
+      source ~/.config/bash/wsl1/env.sh
+    else  # Linux
+      # Linux
+    fi
+    ;;
+  'Darwin')
+    source ~/.config/bash/mac/alias.sh
+    source ~/.config/bash/mac/env.sh
+    ;;
+  *) ;;
+esac
 
 
 # ==============================

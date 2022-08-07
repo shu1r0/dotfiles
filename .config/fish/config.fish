@@ -3,8 +3,14 @@ if status is-interactive
 end
 
 set MY_OS (uname -s)
-if test "$MY_OS" = "Darwin"
-    [ -f "$HOME/.bin/mac_env/path.sh" ] && source "$HOME/.bin/mac_env/path.sh"
+if test "$MY_OS" = "Linux"
+    if uname -a | grep -q '^Linux.*Microsoft'
+      source ~/.config/bash/wsl1/alias.sh
+      source ~/.config/bash/wsl1/env.sh
+    end
+else if test "$MY_OS" = "Darwin"
+    source ~/.config/bash/mac/alias.sh
+    source ~/.config/bash/mac/env.sh
 end
 
 # ALIAS
