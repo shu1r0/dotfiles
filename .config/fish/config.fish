@@ -9,8 +9,10 @@ if test "$MY_OS" = "Linux"
       source ~/.config/bash/wsl1/env.sh
     else
         if test -f /etc/lsb-release
-            source ~/.config/bash/mac/alias.sh
-            source ~/.config/bash/mac/env.sh
+            source ~/.config/bash/ubuntu/alias.sh
+            source ~/.config/bash/ubuntu/env.sh
+        else
+            echo "Unknown Linux OS"
         end
     end
 else if test "$MY_OS" = "Darwin"
