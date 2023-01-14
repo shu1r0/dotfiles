@@ -17,8 +17,8 @@ case $MY_OS in
     else  
       # Linux
       if [ -e /etc/lsb-release ]; then  # ubuntu
-        source ~/.config/bash/mac/alias.sh
-        source ~/.config/bash/mac/env.sh
+        source ~/.config/bash/ubuntu/alias.sh
+        source ~/.config/bash/ubuntu/env.sh
       fi
     fi
     ;;
