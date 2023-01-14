@@ -4,14 +4,22 @@ end
 
 set MY_OS (uname -s)
 if test "$MY_OS" = "Linux"
-    if uname -a | grep -q '^Linux.*Microsoft'
+    if uname -a | grep -q "^Linux.*Microsoft"
       source ~/.config/bash/wsl1/alias.sh
       source ~/.config/bash/wsl1/env.sh
+    else
+        if test -f /etc/lsb-release
+            source ~/.config/bash/mac/alias.sh
+            source ~/.config/bash/mac/env.sh
+        end
     end
 else if test "$MY_OS" = "Darwin"
     source ~/.config/bash/mac/alias.sh
     source ~/.config/bash/mac/env.sh
 end
+
+# remove default message
+set -g -x fish_greeting ''
 
 # ALIAS
 source ~/.config/bash/alias.sh

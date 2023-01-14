@@ -14,11 +14,16 @@ case $MY_OS in
     if uname -a | grep -q '^Linux.*Microsoft'; then
       source ~/.config/bash/wsl1/alias.sh
       source ~/.config/bash/wsl1/env.sh
-    else  # Linux
+    else  
       # Linux
+      if [ -e /etc/lsb-release ]; then  # ubuntu
+        source ~/.config/bash/mac/alias.sh
+        source ~/.config/bash/mac/env.sh
+      fi
     fi
     ;;
   'Darwin')
+    # Mac OS
     source ~/.config/bash/mac/alias.sh
     source ~/.config/bash/mac/env.sh
     ;;

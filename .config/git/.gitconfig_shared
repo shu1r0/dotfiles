@@ -1,7 +1,9 @@
 [push]
 	deafult = matching
 	default = matching
-
+[core]
+	autocrlf = input
+	editor = vim
 [alias]
 	search-hash = !git log --graph --pretty=format:'%d %an: %s %ar %h' | peco | awk -F ' ' '{ print $NF }'
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
@@ -26,5 +28,3 @@
 	cancel = reset --soft HEAD^
 	zip = !git archive --format=zip HEAD > `git symbolic-ref --short HEAD`.zip
 	drag = pull --rebase
-[core]
-	editor = vim
