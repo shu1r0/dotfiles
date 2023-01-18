@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PS1="\w \u \! \$ "
+export PS1="\033[34m\w\033[m \033[32m\u@\h\033[m \033[34m\! \$\033[m"
 
 export PATH="/usr/local/sbin:$PATH"
 
