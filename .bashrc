@@ -1,30 +1,34 @@
-export PS1="\w \u \! \$ "
+#!/usr/bin/env bash
 
+export PS1="\033[34m\w\033[m \033[32m\u@\h\033[m \033[34m\! \$\033[m"
 
-# ==============================
-# PATH
-# ==============================
 export PATH="/usr/local/sbin:$PATH"
 
-
-# ==============================
-# ALIAS
-# ==============================
-alias ls="/bin/ls -GF"
-alias la="/bin/ls -GF"
-alias ll="/bin/ls -al"
-# RSSIなどを調べることができるコマンド(本当はパスを通すべき)
-alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-
-alias update="brew -v; brew update -y; brew upgrade;"
+source ~/.config/bash/alias.sh
 
 
-# ==============================
-# Brew
-# ==============================
-function install_brew(){
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-}
+MY_OS=$(uname -s)
+case $MY_OS in
+  'Linux')
+    # WSL
+    if uname -a | grep -q '^Linux.*Microsoft'; then
+      source ~/.config/bash/wsl1/alias.sh
+      source ~/.config/bash/wsl1/env.sh
+    else  
+      # Linux
+      if [ -e /etc/lsb-release ]; then  # ubuntu
+        source ~/.config/bash/ubuntu/alias.sh
+        source ~/.config/bash/ubuntu/env.sh
+      fi
+    fi
+    ;;
+  'Darwin')
+    # Mac OS
+    source ~/.config/bash/mac/alias.sh
+    source ~/.config/bash/mac/env.sh
+    ;;
+  *) ;;
+esac
 
 
 # ==============================

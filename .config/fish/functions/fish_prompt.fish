@@ -11,7 +11,8 @@ function __user_host
   else
     echo -n (set_color --bold green)
   end
-  echo -n $USER@(hostname|cut -d . -f 1) (set color normal)
+  # echo -n $USER@(hostname|cut -d . -f 1) (set color normal)
+  echo -n $USER (set color normal)
 end
 
 function __current_path
@@ -71,7 +72,7 @@ function fish_prompt
   end
 
   echo -n (set_color white)"╭─"(set_color normal)
-#   __user_host
+  __user_host
   __current_path
   __fish_git_prompt
   echo -e ''
