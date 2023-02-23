@@ -4,8 +4,8 @@
 
 apt install -y fish curl
 
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install laughedelic/fish_logo
 
 chsh -s /usr/bin/fish
-fish
+# fish
