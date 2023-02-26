@@ -66,9 +66,11 @@ function fish_prompt
   set -g fish_prompt_git_status_clean "✔"
 
   if [ $status -eq 0 ]
-    set status_face (set_color green)"(*'-') < "
+    # set status_face (set_color green)"(*'-') < "
+    set status_face (set_color green)"(*ﾉ･ω･)ﾉ < "
   else
-    set status_face (set_color blue)"(*;-;) < "
+    # set status_face (set_color blue)"(*;-;) < "
+    set status_face (set_color blue)"(# ﾟДﾟ) < "
   end
 
   echo -n (set_color white)"╭─"(set_color normal)
