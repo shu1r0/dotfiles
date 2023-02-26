@@ -11,8 +11,8 @@ function __user_host
   else
     echo -n (set_color --bold green)
   end
-  # echo -n $USER@(hostname|cut -d . -f 1) (set color normal)
-  echo -n $USER (set color normal)
+  echo -n $USER@(hostname|cut -d . -f 1) (set color normal)
+  # echo -n $USER (set color normal)
 end
 
 function __current_path

@@ -4,8 +4,8 @@
 
 apt install -y fish curl
 
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install laughedelic/fish_logo
+fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+fish -c "fisher install laughedelic/fish_logo"
 
 chsh -s /usr/bin/fish
 # fish
