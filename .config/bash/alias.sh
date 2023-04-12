@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 
 # References:
 #  * https://github.com/vikaskyadav/awesome-bash-alias

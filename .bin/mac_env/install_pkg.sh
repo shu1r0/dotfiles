@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew install sl
@@ -12,5 +14,5 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 fisher install laughedelic/fish_logo
 
 brew install --cask mactex-no-gui
-sudo tlmgr update --self --all  
+sudo tlmgr update --self --all
 
