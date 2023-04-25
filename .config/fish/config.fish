@@ -4,6 +4,10 @@ end
 
 set MY_OS (uname -s)
 if test "$MY_OS" = "Linux"
+    if test -f ~/.bash_profile
+        source ~/.bash_profile
+    end
+    
     if uname -a | grep -q "^Linux.*Microsoft"
       source ~/.config/bash/wsl1/alias.sh
       source ~/.config/bash/wsl1/env.sh
@@ -16,6 +20,9 @@ if test "$MY_OS" = "Linux"
         end
     end
 else if test "$MY_OS" = "Darwin"
+    if test -f ~/.bash_profile
+        source ~/.bash_profile
+    end
     source ~/.config/bash/mac/alias.sh
     source ~/.config/bash/mac/env.sh
 end
