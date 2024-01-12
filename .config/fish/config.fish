@@ -7,6 +7,9 @@ if test "$MY_OS" = "Linux"
     if test -f ~/.bash_profile
         source ~/.bash_profile
     end
+    if test -f ~/.zprofile
+        source ~/.zprofile
+    end
     
     if uname -a | grep -q "^Linux.*Microsoft"
       source ~/.config/bash/wsl1/alias.sh
@@ -22,6 +25,9 @@ if test "$MY_OS" = "Linux"
 else if test "$MY_OS" = "Darwin"
     if test -f ~/.bash_profile
         source ~/.bash_profile
+    end
+    if test -f ~/.zprofile
+        source ~/.zprofile
     end
     source ~/.config/bash/mac/alias.sh
     source ~/.config/bash/mac/env.sh
@@ -50,4 +56,4 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
-fish_logo
+# fish_logo

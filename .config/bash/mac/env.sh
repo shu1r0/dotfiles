@@ -8,3 +8,6 @@ export PATH="$PATH:/usr/local/Cellar/sstp-client/1.0.18/sbin/"
 
 # for java
 export PATH="$PATH:/usr/local/opt/openjdk/bin"
+
+# for neko
+export NEKOPATH="/opt/homebrew/lib/neko"
