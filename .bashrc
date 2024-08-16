@@ -126,5 +126,3 @@ cat << 'EOS'
 　 　 　 　 　 　 ﾋﾞﾘ　　　　　ﾋﾞﾘ
 EOS
 }
-. "$HOME/.cargo/env"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
